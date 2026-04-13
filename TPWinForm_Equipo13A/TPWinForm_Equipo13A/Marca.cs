@@ -12,5 +12,8 @@ namespace TPWinForm_Equipo13A
           - id
           - descripcion
         */
+
+        public int Id {  get; set; }
+        public decimal Descripcion { get; set; }
     }
 }
