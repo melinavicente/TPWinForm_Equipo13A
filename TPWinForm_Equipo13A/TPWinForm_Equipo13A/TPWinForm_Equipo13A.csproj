@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FE5ECF83-298B-4AAB-8516-AEFE793B003D}</ProjectGuid>
+    <ProjectGuid>{8EA8B6F5-E4DF-4BA5-A46D-9821848DBE84}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Catalogo</RootNamespace>
-    <AssemblyName>Catalogo</AssemblyName>
+    <RootNamespace>TPWinForm_Equipo13A</RootNamespace>
+    <AssemblyName>TPWinForm_Equipo13A</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

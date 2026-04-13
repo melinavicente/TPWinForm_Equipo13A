@@ -1,4 +1,4 @@
-﻿namespace Catalogo
+﻿namespace TPWinForm_Equipo13A
 {
     partial class Form1
     {

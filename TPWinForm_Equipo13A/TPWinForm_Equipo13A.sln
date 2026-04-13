@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36717.8 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalogo", "Catalogo\Catalogo.csproj", "{FE5ECF83-298B-4AAB-8516-AEFE793B003D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPWinForm_Equipo13A", "TPWinForm_Equipo13A\TPWinForm_Equipo13A.csproj", "{8EA8B6F5-E4DF-4BA5-A46D-9821848DBE84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FE5ECF83-298B-4AAB-8516-AEFE793B003D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FE5ECF83-298B-4AAB-8516-AEFE793B003D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FE5ECF83-298B-4AAB-8516-AEFE793B003D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FE5ECF83-298B-4AAB-8516-AEFE793B003D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EA8B6F5-E4DF-4BA5-A46D-9821848DBE84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EA8B6F5-E4DF-4BA5-A46D-9821848DBE84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EA8B6F5-E4DF-4BA5-A46D-9821848DBE84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EA8B6F5-E4DF-4BA5-A46D-9821848DBE84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {EE042E68-4CAC-4D7A-A09E-74A93AE334ED}
+		SolutionGuid = {EE4E8DCB-6BF7-4642-831E-A13EB62A3B43}
 	EndGlobalSection
 EndGlobal

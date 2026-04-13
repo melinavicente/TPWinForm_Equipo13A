@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Catalogo.Properties
+namespace TPWinForm_Equipo13A.Properties
 {
 
 

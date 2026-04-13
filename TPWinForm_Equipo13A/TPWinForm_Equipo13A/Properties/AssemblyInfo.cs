@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("Catalogo")]
+[assembly: AssemblyTitle("TPWinForm_Equipo13A")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Catalogo")]
+[assembly: AssemblyProduct("TPWinForm_Equipo13A")]
 [assembly: AssemblyCopyright("Copyright ©  2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-[assembly: Guid("fe5ecf83-298b-4aab-8516-aefe793b003d")]
+[assembly: Guid("8ea8b6f5-e4df-4ba5-a46d-9821848dbe84")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //

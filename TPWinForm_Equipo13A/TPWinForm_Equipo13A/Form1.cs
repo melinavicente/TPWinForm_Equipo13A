@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Catalogo
+namespace TPWinForm_Equipo13A
 {
     public partial class Form1 : Form
     {
