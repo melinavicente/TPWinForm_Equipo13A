@@ -9,7 +9,16 @@ namespace TPWinForm_Equipo13A
 {
     internal class Articulo
     {
-        public int Id { get; set; }
+        int IDArticulo;
+        public Articulo() 
+        {
+            IDArticulo = 0;
+        }
+        public int Id
+        {
+            get { return IDArticulo; }
+            set { IDArticulo = Id; }
+        }
         public string Codigo { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
