@@ -45,7 +45,10 @@ namespace TPWinForm_Equipo13A
 
             criterioBusqueda.SelectedIndex = 0;
 
-            CargarDatosDePrueba();
+            ProductoNegocio Productos = new ProductoNegocio();
+            dgvArticulos.DataSource = Productos.listar();
+
+            //CargarDatosDePrueba();
         }
 
         private void btnListadoArt_Click(object sender, EventArgs e)
