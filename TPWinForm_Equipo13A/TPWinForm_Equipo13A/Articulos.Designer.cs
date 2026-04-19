@@ -99,9 +99,9 @@
             this.grpbDetalleProducto.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.grpbDetalleProducto.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpbDetalleProducto.Location = new System.Drawing.Point(220, 119);
-            this.grpbDetalleProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpbDetalleProducto.Margin = new System.Windows.Forms.Padding(2);
             this.grpbDetalleProducto.Name = "grpbDetalleProducto";
-            this.grpbDetalleProducto.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpbDetalleProducto.Padding = new System.Windows.Forms.Padding(2);
             this.grpbDetalleProducto.Size = new System.Drawing.Size(232, 260);
             this.grpbDetalleProducto.TabIndex = 3;
             this.grpbDetalleProducto.TabStop = false;
@@ -243,7 +243,7 @@
             // 
             this.picProducto.BackColor = System.Drawing.Color.Gray;
             this.picProducto.Location = new System.Drawing.Point(499, 119);
-            this.picProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picProducto.Margin = new System.Windows.Forms.Padding(2);
             this.picProducto.Name = "picProducto";
             this.picProducto.Size = new System.Drawing.Size(144, 142);
             this.picProducto.TabIndex = 4;
@@ -258,6 +258,7 @@
             this.btn_eliminar.TabIndex = 5;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_modificar
             // 
@@ -267,6 +268,7 @@
             this.btn_modificar.TabIndex = 6;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // btn_agregar
             // 
@@ -290,7 +292,7 @@
             this.Controls.Add(this.grpbDetalleProducto);
             this.Controls.Add(this.lsbListadoArticulos);
             this.Controls.Add(this.lblArticulos);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Articulos";
             this.Text = "Articulos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

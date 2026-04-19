@@ -86,5 +86,36 @@ namespace TPWinForm_Equipo13A
         {
 
         }
+
+        private void btn_modificar_Click(object sender, EventArgs e)
+        {
+
+        }
+        //PORQUE NO SE ENVIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            if (lsbListadoArticulos.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor, seleccione un artículo para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DialogResult confirmacion = MessageBox.Show("Estas por eliminar un articulo", "Confirmar eliminación",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+
+            if (confirmacion == DialogResult.Yes)
+            {
+                lsbListadoArticulos.Items.RemoveAt(lsbListadoArticulos.SelectedIndex);
+
+                lblItemId.Text = "";
+                lblItemNombre.Text = "";
+                lblItemDescripcion.Text = "";
+                lblItemPrecio.Text = "";
+                lblItemMarca.Text = "";
+                lblItemCategoria.Text = "";
+            }
+        }
+
     }
 }
