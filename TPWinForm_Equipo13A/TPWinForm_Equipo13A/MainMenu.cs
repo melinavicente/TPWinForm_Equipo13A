@@ -105,7 +105,9 @@ namespace TPWinForm_Equipo13A
         private void btnListadoArt_Click(object sender, EventArgs e)
         {
             Articulos formArticulo = new Articulos();
+            this.Hide();
             formArticulo.ShowDialog();
+
         }
 
         //Tire todos los vacios para abajo de todo
@@ -117,5 +119,9 @@ namespace TPWinForm_Equipo13A
 
         private void textBox_usuario_TextChanged(object sender, EventArgs e) { }
 
+        private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

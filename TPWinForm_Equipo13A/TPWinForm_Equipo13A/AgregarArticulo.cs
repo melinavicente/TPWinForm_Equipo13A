@@ -14,9 +14,18 @@ namespace TPWinForm_Equipo13A
 {
     public partial class AgregarArticulo : Form
     {
+        private Articulo articulo = null;
+
         public AgregarArticulo()
         {
             InitializeComponent();
+        }
+
+        public AgregarArticulo(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            Text = "Modificar Articulo";
         }
 
         private void btnAgregarAceptar_Click(object sender, EventArgs e)
@@ -32,18 +41,30 @@ namespace TPWinForm_Equipo13A
 
             try
             {
-                Articulo nuevo = new Articulo();
-                nuevo.Codigo = txtAgregarCodigo.Text;
-                nuevo.Nombre = txtAgregarNombre.Text;
-                nuevo.Descripcion = txtbAgregarDescripcion.Text;
-                nuevo.Precio = decimal.Parse(txtbAgregarPrecio.Text);
-                nuevo.Marca = (Marca)cmbAgregarMarca.SelectedItem;
-                nuevo.Categoria = (Categoria)cmbAgregarCategoria.SelectedItem;
+                if(articulo == null)
+                {
+                    articulo = new Articulo();
+                }
+                articulo.Codigo = txtAgregarCodigo.Text;
+                articulo.Nombre = txtAgregarNombre.Text;
+                articulo.Descripcion = txtbAgregarDescripcion.Text;
+                articulo.Precio = decimal.Parse(txtbAgregarPrecio.Text);
+                articulo.Marca = (Marca)cmbAgregarMarca.SelectedItem;
+                articulo.Categoria = (Categoria)cmbAgregarCategoria.SelectedItem;
 
                 ArticuloNegocio negocio = new ArticuloNegocio();
-                negocio.agregar(nuevo);
-
+                
+                if(articulo.Id !=0)
+                {
+                negocio.modificar(articulo);
+                MessageBox.Show("Modificado agregado correctamente", "Yupiii", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                negocio.agregar(articulo);
                 MessageBox.Show("Articulo agregado correctamente", "Yupiii", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
                 this.Close();
             }
             catch (Exception ex)
@@ -73,6 +94,19 @@ namespace TPWinForm_Equipo13A
             cmbAgregarCategoria.DataSource = categoriaNegocio.listar();
             cmbAgregarCategoria.DisplayMember = "Descripcion";
             cmbAgregarCategoria.ValueMember = "Id";
+
+            if(articulo != null)
+            {
+                txtAgregarCodigo.Text = articulo.Codigo;
+                txtAgregarNombre.Text = articulo.Nombre;
+                txtbAgregarDescripcion.Text = articulo.Descripcion;
+                cmbAgregarCategoria.SelectedValue = articulo.Categoria.Id;
+                cmbAgregarMarca.SelectedValue = articulo.Marca.Id;
+                txtbAgregarPrecio.Text = articulo.Precio.ToString();
+                
+                
+
+            }
         }
     }
     }

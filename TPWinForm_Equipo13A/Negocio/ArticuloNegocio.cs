@@ -19,7 +19,7 @@ namespace Negocio
 			try
 			{
 				Datos.setearConsulta(
-					"SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca, C.Descripcion as Categoria, I.ImagenUrl as Imagen " +
+                    "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca, C.Descripcion as Categoria, I.ImagenUrl as Imagen, A.IdMarca, A.IdCategoria " +
 					"from ARTICULOS A " +
 					"INNER JOIN MARCAS M ON M.Id = A.IdMarca " +
 					"INNER JOIN CATEGORIAS C ON C.Id = A.IdCategoria " +
@@ -43,11 +43,16 @@ namespace Negocio
 						aux.Codigo = (String)Datos.Lector["Codigo"];
 						aux.Descripcion = (String)Datos.Lector["Descripcion"];
 						aux.Precio = (Decimal)Datos.Lector["Precio"];
+
 						aux.Marca = new Marca();
 						aux.Marca.Descripcion = (string)Datos.Lector["Marca"];
+                        aux.Marca.Id = (int)Datos.Lector["IdMarca"];
+
 						aux.Categoria = new Categoria();
 						aux.Categoria.Descripcion = (string)Datos.Lector["Categoria"];
-						aux.Imagenes = new List<Imagen>();
+                        aux.Categoria.Id = (int)Datos.Lector["IdCategoria"];
+
+                        aux.Imagenes = new List<Imagen>();
 
 						ultimoId = Id;
 						lista.Add(aux);
@@ -109,5 +114,34 @@ namespace Negocio
                 throw ex;
             }
         }
+
+        public void modificar(Articulo art)
+        {
+
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("UPDATE ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdCategoria = @idcategoria, IdMarca = @idmarca Where Id =@id");
+                datos.setearParametro("@codigo", art.Codigo);
+                datos.setearParametro("@nombre", art.Nombre);
+                datos.setearParametro("@descripcion", art.Descripcion);
+                datos.setearParametro("@idcategoria", art.Categoria.Id);
+                datos.setearParametro("@idmarca", art.Marca.Id);
+                datos.setearParametro("@id", art.Id);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
+
     }
-    }
+}

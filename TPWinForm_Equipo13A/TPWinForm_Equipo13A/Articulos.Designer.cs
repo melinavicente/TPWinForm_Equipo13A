@@ -302,6 +302,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Articulos";
             this.Text = "Articulos";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Articulos_FormClosed);
             this.Load += new System.EventHandler(this.Articulos_Load);
             this.grpbDetalleProducto.ResumeLayout(false);
             this.grpbDetalleProducto.PerformLayout();

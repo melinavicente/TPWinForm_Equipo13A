@@ -15,6 +15,7 @@ namespace TPWinForm_Equipo13A
     public partial class Articulos : Form
     {
         int indiceImagen = 0;
+        private ArticuloNegocio negocio = new ArticuloNegocio();
 
         private List<Articulo> listaArticulos;
         public Articulos()
@@ -24,14 +25,10 @@ namespace TPWinForm_Equipo13A
 
         private void Articulos_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
+            //ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
-                listaArticulos = negocio.listar();
-
-                lsbListadoArticulos.DataSource = listaArticulos;
-                lsbListadoArticulos.DisplayMember = "Nombre";
-                lsbListadoArticulos.ValueMember = "Id";
+                actualizarListado(negocio);
             }
             catch (Exception ex)
             {
@@ -105,7 +102,18 @@ namespace TPWinForm_Equipo13A
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
-        private void btn_modificar_Click(object sender, EventArgs e) { }
+        private void btn_modificar_Click(object sender, EventArgs e) {
+
+            Articulo seleccionado;
+            seleccionado = (Articulo)lsbListadoArticulos.SelectedItem;
+
+            AgregarArticulo modificar = new AgregarArticulo(seleccionado);
+            modificar.ShowDialog();
+
+
+            actualizarListado(negocio);
+
+        }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e) { }
 
         private void cargarImagen(string url)
@@ -156,6 +164,21 @@ namespace TPWinForm_Equipo13A
         {
             AgregarArticulo art = new AgregarArticulo();
             art.ShowDialog();
+        }
+
+        private void Articulos_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MainMenu mn = new MainMenu();
+            mn.Show();
+        }
+
+        public void actualizarListado(ArticuloNegocio artNegocio)
+        {
+            listaArticulos = artNegocio.listar();
+
+            lsbListadoArticulos.DataSource = listaArticulos;
+            lsbListadoArticulos.DisplayMember = "Nombre";
+            lsbListadoArticulos.ValueMember = "Id";
         }
     }
 }
