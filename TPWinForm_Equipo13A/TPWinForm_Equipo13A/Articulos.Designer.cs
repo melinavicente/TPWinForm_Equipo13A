@@ -50,6 +50,7 @@
             this.pcbImagenArticulo = new System.Windows.Forms.PictureBox();
             this.btnImagenAnterior = new System.Windows.Forms.Button();
             this.btnImagenSiguiente = new System.Windows.Forms.Button();
+            this.lblSinImagen = new System.Windows.Forms.Label();
             this.grpbDetalleProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagenArticulo)).BeginInit();
             this.SuspendLayout();
@@ -58,9 +59,10 @@
             // 
             this.lblArticulos.AutoSize = true;
             this.lblArticulos.Font = new System.Drawing.Font("Microsoft YaHei UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArticulos.Location = new System.Drawing.Point(45, 22);
+            this.lblArticulos.Location = new System.Drawing.Point(34, 18);
+            this.lblArticulos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblArticulos.Name = "lblArticulos";
-            this.lblArticulos.Size = new System.Drawing.Size(237, 50);
+            this.lblArticulos.Size = new System.Drawing.Size(192, 40);
             this.lblArticulos.TabIndex = 1;
             this.lblArticulos.Text = "ARTÍCULOS";
             // 
@@ -68,11 +70,11 @@
             // 
             this.lsbListadoArticulos.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsbListadoArticulos.FormattingEnabled = true;
-            this.lsbListadoArticulos.ItemHeight = 27;
-            this.lsbListadoArticulos.Location = new System.Drawing.Point(53, 146);
-            this.lsbListadoArticulos.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.lsbListadoArticulos.ItemHeight = 21;
+            this.lsbListadoArticulos.Location = new System.Drawing.Point(40, 119);
+            this.lsbListadoArticulos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lsbListadoArticulos.Name = "lsbListadoArticulos";
-            this.lsbListadoArticulos.Size = new System.Drawing.Size(185, 490);
+            this.lsbListadoArticulos.Size = new System.Drawing.Size(140, 382);
             this.lsbListadoArticulos.TabIndex = 2;
             this.lsbListadoArticulos.SelectedIndexChanged += new System.EventHandler(this.lsbListadoArticulos_SelectedIndexChanged);
             // 
@@ -94,11 +96,11 @@
             this.grpbDetalleProducto.Controls.Add(this.lblIDProducto);
             this.grpbDetalleProducto.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.grpbDetalleProducto.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpbDetalleProducto.Location = new System.Drawing.Point(331, 146);
-            this.grpbDetalleProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpbDetalleProducto.Location = new System.Drawing.Point(248, 119);
+            this.grpbDetalleProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpbDetalleProducto.Name = "grpbDetalleProducto";
-            this.grpbDetalleProducto.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpbDetalleProducto.Size = new System.Drawing.Size(440, 320);
+            this.grpbDetalleProducto.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpbDetalleProducto.Size = new System.Drawing.Size(330, 260);
             this.grpbDetalleProducto.TabIndex = 3;
             this.grpbDetalleProducto.TabStop = false;
             this.grpbDetalleProducto.Text = "DETALLE";
@@ -107,58 +109,65 @@
             // lblItemDescripcion
             // 
             this.lblItemDescripcion.AutoSize = true;
-            this.lblItemDescripcion.Location = new System.Drawing.Point(28, 254);
+            this.lblItemDescripcion.Location = new System.Drawing.Point(21, 206);
+            this.lblItemDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItemDescripcion.Name = "lblItemDescripcion";
-            this.lblItemDescripcion.Size = new System.Drawing.Size(0, 30);
+            this.lblItemDescripcion.Size = new System.Drawing.Size(0, 25);
             this.lblItemDescripcion.TabIndex = 10;
             // 
             // lblItemPrecio
             // 
             this.lblItemPrecio.AutoSize = true;
-            this.lblItemPrecio.Location = new System.Drawing.Point(99, 186);
+            this.lblItemPrecio.Location = new System.Drawing.Point(74, 151);
+            this.lblItemPrecio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItemPrecio.Name = "lblItemPrecio";
-            this.lblItemPrecio.Size = new System.Drawing.Size(0, 30);
+            this.lblItemPrecio.Size = new System.Drawing.Size(0, 25);
             this.lblItemPrecio.TabIndex = 9;
             // 
             // lblItemCategoria
             // 
             this.lblItemCategoria.AutoSize = true;
-            this.lblItemCategoria.Location = new System.Drawing.Point(115, 146);
+            this.lblItemCategoria.Location = new System.Drawing.Point(86, 119);
+            this.lblItemCategoria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItemCategoria.Name = "lblItemCategoria";
-            this.lblItemCategoria.Size = new System.Drawing.Size(0, 30);
+            this.lblItemCategoria.Size = new System.Drawing.Size(0, 25);
             this.lblItemCategoria.TabIndex = 8;
             // 
             // lblItemMarca
             // 
             this.lblItemMarca.AutoSize = true;
-            this.lblItemMarca.Location = new System.Drawing.Point(93, 116);
+            this.lblItemMarca.Location = new System.Drawing.Point(70, 94);
+            this.lblItemMarca.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItemMarca.Name = "lblItemMarca";
-            this.lblItemMarca.Size = new System.Drawing.Size(0, 30);
+            this.lblItemMarca.Size = new System.Drawing.Size(0, 25);
             this.lblItemMarca.TabIndex = 7;
             // 
             // lblItemNombre
             // 
             this.lblItemNombre.AutoSize = true;
-            this.lblItemNombre.Location = new System.Drawing.Point(109, 80);
+            this.lblItemNombre.Location = new System.Drawing.Point(82, 65);
+            this.lblItemNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItemNombre.Name = "lblItemNombre";
-            this.lblItemNombre.Size = new System.Drawing.Size(0, 30);
+            this.lblItemNombre.Size = new System.Drawing.Size(0, 25);
             this.lblItemNombre.TabIndex = 7;
             // 
             // lblItemId
             // 
             this.lblItemId.AutoSize = true;
-            this.lblItemId.Location = new System.Drawing.Point(55, 41);
+            this.lblItemId.Location = new System.Drawing.Point(41, 33);
+            this.lblItemId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItemId.Name = "lblItemId";
-            this.lblItemId.Size = new System.Drawing.Size(0, 30);
+            this.lblItemId.Size = new System.Drawing.Size(0, 25);
             this.lblItemId.TabIndex = 6;
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(17, 153);
+            this.lblCategoria.Location = new System.Drawing.Point(13, 124);
+            this.lblCategoria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(92, 23);
+            this.lblCategoria.Size = new System.Drawing.Size(77, 20);
             this.lblCategoria.TabIndex = 5;
             this.lblCategoria.Text = "Categoría:";
             // 
@@ -166,9 +175,10 @@
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(17, 116);
+            this.lblMarca.Location = new System.Drawing.Point(13, 94);
+            this.lblMarca.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(64, 23);
+            this.lblMarca.Size = new System.Drawing.Size(54, 20);
             this.lblMarca.TabIndex = 4;
             this.lblMarca.Text = "Marca:";
             // 
@@ -176,9 +186,10 @@
             // 
             this.lblPrecioProducto.AutoSize = true;
             this.lblPrecioProducto.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioProducto.Location = new System.Drawing.Point(17, 192);
+            this.lblPrecioProducto.Location = new System.Drawing.Point(13, 156);
+            this.lblPrecioProducto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecioProducto.Name = "lblPrecioProducto";
-            this.lblPrecioProducto.Size = new System.Drawing.Size(76, 23);
+            this.lblPrecioProducto.Size = new System.Drawing.Size(63, 20);
             this.lblPrecioProducto.TabIndex = 3;
             this.lblPrecioProducto.Text = "Precio $";
             // 
@@ -186,9 +197,10 @@
             // 
             this.lblDescripcionProducto.AutoSize = true;
             this.lblDescripcionProducto.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionProducto.Location = new System.Drawing.Point(17, 230);
+            this.lblDescripcionProducto.Location = new System.Drawing.Point(13, 187);
+            this.lblDescripcionProducto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescripcionProducto.Name = "lblDescripcionProducto";
-            this.lblDescripcionProducto.Size = new System.Drawing.Size(111, 23);
+            this.lblDescripcionProducto.Size = new System.Drawing.Size(91, 20);
             this.lblDescripcionProducto.TabIndex = 2;
             this.lblDescripcionProducto.Text = "Descripción:";
             // 
@@ -196,9 +208,10 @@
             // 
             this.lblNombreProducto.AutoSize = true;
             this.lblNombreProducto.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreProducto.Location = new System.Drawing.Point(17, 80);
+            this.lblNombreProducto.Location = new System.Drawing.Point(13, 65);
+            this.lblNombreProducto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreProducto.Name = "lblNombreProducto";
-            this.lblNombreProducto.Size = new System.Drawing.Size(82, 23);
+            this.lblNombreProducto.Size = new System.Drawing.Size(67, 20);
             this.lblNombreProducto.TabIndex = 1;
             this.lblNombreProducto.Text = "Nombre:";
             // 
@@ -206,9 +219,10 @@
             // 
             this.lblIDProducto.AutoSize = true;
             this.lblIDProducto.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDProducto.Location = new System.Drawing.Point(17, 48);
+            this.lblIDProducto.Location = new System.Drawing.Point(13, 39);
+            this.lblIDProducto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIDProducto.Name = "lblIDProducto";
-            this.lblIDProducto.Size = new System.Drawing.Size(32, 23);
+            this.lblIDProducto.Size = new System.Drawing.Size(27, 20);
             this.lblIDProducto.TabIndex = 0;
             this.lblIDProducto.Text = "ID:";
             // 
@@ -216,18 +230,18 @@
             // 
             this.lblSubTittle.AutoSize = true;
             this.lblSubTittle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubTittle.Location = new System.Drawing.Point(49, 103);
+            this.lblSubTittle.Location = new System.Drawing.Point(37, 84);
+            this.lblSubTittle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSubTittle.Name = "lblSubTittle";
-            this.lblSubTittle.Size = new System.Drawing.Size(217, 25);
+            this.lblSubTittle.Size = new System.Drawing.Size(176, 20);
             this.lblSubTittle.TabIndex = 0;
             this.lblSubTittle.Text = "Seleccione un producto";
             // 
             // btn_eliminar
             // 
-            this.btn_eliminar.Location = new System.Drawing.Point(352, 502);
-            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_eliminar.Location = new System.Drawing.Point(264, 408);
             this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(309, 28);
+            this.btn_eliminar.Size = new System.Drawing.Size(232, 23);
             this.btn_eliminar.TabIndex = 5;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = true;
@@ -235,10 +249,9 @@
             // 
             // btn_modificar
             // 
-            this.btn_modificar.Location = new System.Drawing.Point(352, 549);
-            this.btn_modificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_modificar.Location = new System.Drawing.Point(264, 446);
             this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(309, 28);
+            this.btn_modificar.Size = new System.Drawing.Size(232, 23);
             this.btn_modificar.TabIndex = 6;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = true;
@@ -246,10 +259,9 @@
             // 
             // btn_agregar
             // 
-            this.btn_agregar.Location = new System.Drawing.Point(352, 598);
-            this.btn_agregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_agregar.Location = new System.Drawing.Point(264, 486);
             this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(309, 28);
+            this.btn_agregar.Size = new System.Drawing.Size(232, 23);
             this.btn_agregar.TabIndex = 7;
             this.btn_agregar.Text = "Agregar ";
             this.btn_agregar.UseVisualStyleBackColor = true;
@@ -257,18 +269,20 @@
             // 
             // pcbImagenArticulo
             // 
-            this.pcbImagenArticulo.Location = new System.Drawing.Point(894, 187);
+            this.pcbImagenArticulo.Location = new System.Drawing.Point(670, 152);
+            this.pcbImagenArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pcbImagenArticulo.Name = "pcbImagenArticulo";
-            this.pcbImagenArticulo.Size = new System.Drawing.Size(216, 182);
+            this.pcbImagenArticulo.Size = new System.Drawing.Size(162, 148);
             this.pcbImagenArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbImagenArticulo.TabIndex = 8;
             this.pcbImagenArticulo.TabStop = false;
             // 
             // btnImagenAnterior
             // 
-            this.btnImagenAnterior.Location = new System.Drawing.Point(894, 417);
+            this.btnImagenAnterior.Location = new System.Drawing.Point(670, 339);
+            this.btnImagenAnterior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnImagenAnterior.Name = "btnImagenAnterior";
-            this.btnImagenAnterior.Size = new System.Drawing.Size(75, 23);
+            this.btnImagenAnterior.Size = new System.Drawing.Size(56, 19);
             this.btnImagenAnterior.TabIndex = 9;
             this.btnImagenAnterior.Text = "Anterior";
             this.btnImagenAnterior.UseVisualStyleBackColor = true;
@@ -276,19 +290,31 @@
             // 
             // btnImagenSiguiente
             // 
-            this.btnImagenSiguiente.Location = new System.Drawing.Point(1035, 417);
+            this.btnImagenSiguiente.Location = new System.Drawing.Point(776, 339);
+            this.btnImagenSiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnImagenSiguiente.Name = "btnImagenSiguiente";
-            this.btnImagenSiguiente.Size = new System.Drawing.Size(75, 23);
+            this.btnImagenSiguiente.Size = new System.Drawing.Size(56, 19);
             this.btnImagenSiguiente.TabIndex = 10;
             this.btnImagenSiguiente.Text = "Siguiente";
             this.btnImagenSiguiente.UseVisualStyleBackColor = true;
             this.btnImagenSiguiente.Click += new System.EventHandler(this.btnImagenSiguiente_Click);
             // 
+            // lblSinImagen
+            // 
+            this.lblSinImagen.Location = new System.Drawing.Point(667, 152);
+            this.lblSinImagen.Name = "lblSinImagen";
+            this.lblSinImagen.Size = new System.Drawing.Size(165, 148);
+            this.lblSinImagen.TabIndex = 11;
+            this.lblSinImagen.Text = "Sin imagen disponible";
+            this.lblSinImagen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSinImagen.Visible = false;
+            // 
             // Articulos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1259, 798);
+            this.ClientSize = new System.Drawing.Size(944, 648);
+            this.Controls.Add(this.lblSinImagen);
             this.Controls.Add(this.btnImagenSiguiente);
             this.Controls.Add(this.btnImagenAnterior);
             this.Controls.Add(this.pcbImagenArticulo);
@@ -299,7 +325,7 @@
             this.Controls.Add(this.grpbDetalleProducto);
             this.Controls.Add(this.lsbListadoArticulos);
             this.Controls.Add(this.lblArticulos);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Articulos";
             this.Text = "Articulos";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Articulos_FormClosed);
@@ -335,5 +361,6 @@
         private System.Windows.Forms.PictureBox pcbImagenArticulo;
         private System.Windows.Forms.Button btnImagenAnterior;
         private System.Windows.Forms.Button btnImagenSiguiente;
+        private System.Windows.Forms.Label lblSinImagen;
     }
 }

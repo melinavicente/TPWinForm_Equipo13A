@@ -38,6 +38,7 @@ namespace TPWinForm_Equipo13A
         }
         private void lsbListadoArticulos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Articulo articuloSeleccionado = listaArticulos[lsbListadoArticulos.SelectedIndex];
             if (lsbListadoArticulos.SelectedItem == null) return;
 
             try
@@ -53,9 +54,16 @@ namespace TPWinForm_Equipo13A
 
                 indiceImagen = 0;
 
-                if (ArticuloSeleccionado.Imagenes != null && ArticuloSeleccionado.Imagenes.Count > 0)
+                if (articuloSeleccionado.Imagenes != null && articuloSeleccionado.Imagenes.Count > 0)
                 {
-                    cargarImagen(ArticuloSeleccionado.Imagenes[0].URL);
+                    pcbImagenArticulo.Visible = true;
+                    lblSinImagen.Visible = false;
+                    cargarImagen(articuloSeleccionado.Imagenes[0].URL); 
+                }
+                else
+                {
+                    pcbImagenArticulo.Visible = false;
+                    lblSinImagen.Visible = true;
                 }
             }
             catch (Exception ex)

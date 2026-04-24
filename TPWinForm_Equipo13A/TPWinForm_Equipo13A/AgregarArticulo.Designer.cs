@@ -49,7 +49,7 @@
             // txtAgregarCodigo
             // 
             this.txtAgregarCodigo.Location = new System.Drawing.Point(124, 65);
-            this.txtAgregarCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAgregarCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtAgregarCodigo.Name = "txtAgregarCodigo";
             this.txtAgregarCodigo.Size = new System.Drawing.Size(76, 20);
             this.txtAgregarCodigo.TabIndex = 0;
@@ -128,7 +128,7 @@
             // txtAgregarNombre
             // 
             this.txtAgregarNombre.Location = new System.Drawing.Point(124, 107);
-            this.txtAgregarNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAgregarNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtAgregarNombre.Name = "txtAgregarNombre";
             this.txtAgregarNombre.Size = new System.Drawing.Size(76, 20);
             this.txtAgregarNombre.TabIndex = 8;
@@ -136,7 +136,7 @@
             // txtbAgregarDescripcion
             // 
             this.txtbAgregarDescripcion.Location = new System.Drawing.Point(124, 145);
-            this.txtbAgregarDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtbAgregarDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtbAgregarDescripcion.Name = "txtbAgregarDescripcion";
             this.txtbAgregarDescripcion.Size = new System.Drawing.Size(76, 20);
             this.txtbAgregarDescripcion.TabIndex = 9;
@@ -145,7 +145,7 @@
             // 
             this.cmbAgregarMarca.FormattingEnabled = true;
             this.cmbAgregarMarca.Location = new System.Drawing.Point(124, 184);
-            this.cmbAgregarMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbAgregarMarca.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAgregarMarca.Name = "cmbAgregarMarca";
             this.cmbAgregarMarca.Size = new System.Drawing.Size(92, 21);
             this.cmbAgregarMarca.TabIndex = 10;
@@ -154,7 +154,7 @@
             // 
             this.cmbAgregarCategoria.FormattingEnabled = true;
             this.cmbAgregarCategoria.Location = new System.Drawing.Point(124, 223);
-            this.cmbAgregarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbAgregarCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAgregarCategoria.Name = "cmbAgregarCategoria";
             this.cmbAgregarCategoria.Size = new System.Drawing.Size(92, 21);
             this.cmbAgregarCategoria.TabIndex = 11;
@@ -162,7 +162,7 @@
             // txtbAgregarPrecio
             // 
             this.txtbAgregarPrecio.Location = new System.Drawing.Point(124, 261);
-            this.txtbAgregarPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtbAgregarPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtbAgregarPrecio.Name = "txtbAgregarPrecio";
             this.txtbAgregarPrecio.Size = new System.Drawing.Size(76, 20);
             this.txtbAgregarPrecio.TabIndex = 12;
@@ -170,15 +170,16 @@
             // txtbAgregarURL
             // 
             this.txtbAgregarURL.Location = new System.Drawing.Point(124, 310);
-            this.txtbAgregarURL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtbAgregarURL.Margin = new System.Windows.Forms.Padding(2);
             this.txtbAgregarURL.Name = "txtbAgregarURL";
             this.txtbAgregarURL.Size = new System.Drawing.Size(76, 20);
             this.txtbAgregarURL.TabIndex = 13;
+            this.txtbAgregarURL.TextChanged += new System.EventHandler(this.txtbAgregarURL_TextChanged);
             // 
             // btnAgregarAceptar
             // 
             this.btnAgregarAceptar.Location = new System.Drawing.Point(65, 367);
-            this.btnAgregarAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarAceptar.Name = "btnAgregarAceptar";
             this.btnAgregarAceptar.Size = new System.Drawing.Size(56, 19);
             this.btnAgregarAceptar.TabIndex = 14;
@@ -189,7 +190,7 @@
             // btnAgregarCancelar
             // 
             this.btnAgregarCancelar.Location = new System.Drawing.Point(173, 367);
-            this.btnAgregarCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarCancelar.Name = "btnAgregarCancelar";
             this.btnAgregarCancelar.Size = new System.Drawing.Size(56, 19);
             this.btnAgregarCancelar.TabIndex = 15;
@@ -217,7 +218,7 @@
             this.Controls.Add(this.lblAgregarCodigo);
             this.Controls.Add(this.lblAgregarNombre);
             this.Controls.Add(this.txtAgregarCodigo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AgregarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarArticulo";

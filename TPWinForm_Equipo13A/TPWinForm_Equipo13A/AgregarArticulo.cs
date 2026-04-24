@@ -53,7 +53,7 @@ namespace TPWinForm_Equipo13A
                 articulo.Categoria = (Categoria)cmbAgregarCategoria.SelectedItem;
 
                 ArticuloNegocio negocio = new ArticuloNegocio();
-                
+
                 if(articulo.Id !=0)
                 {
                 negocio.modificar(articulo);
@@ -107,6 +107,11 @@ namespace TPWinForm_Equipo13A
                 
 
             }
+        }
+
+        private void txtbAgregarURL_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }
