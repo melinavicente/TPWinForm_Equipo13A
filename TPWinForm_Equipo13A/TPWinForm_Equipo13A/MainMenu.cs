@@ -125,5 +125,19 @@ namespace TPWinForm_Equipo13A
             Application.Exit();
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Marcas marcas = new Marcas();
+            marcas.Show();
+            this.Hide();
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            Categorias categorias  = new Categorias();
+            categorias.Show(); 
+            this.Hide(); 
+        }
     }
 }

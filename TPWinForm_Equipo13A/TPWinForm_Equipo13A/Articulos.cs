@@ -112,8 +112,7 @@ namespace TPWinForm_Equipo13A
 
         private void btn_modificar_Click(object sender, EventArgs e) {
 
-            Articulo seleccionado;
-            seleccionado = (Articulo)lsbListadoArticulos.SelectedItem;
+            Articulo seleccionado = (Articulo)lsbListadoArticulos.SelectedItem;
 
             AgregarArticulo modificar = new AgregarArticulo(seleccionado);
             modificar.ShowDialog();

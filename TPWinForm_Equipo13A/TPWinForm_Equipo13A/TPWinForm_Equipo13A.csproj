@@ -58,6 +58,18 @@
     <Compile Include="Articulos.Designer.cs">
       <DependentUpon>Articulos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Categorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorias.Designer.cs">
+      <DependentUpon>Categorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marcas.Designer.cs">
+      <DependentUpon>Marcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Imagenes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,11 +90,17 @@
     <EmbeddedResource Include="Articulos.resx">
       <DependentUpon>Articulos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Categorias.resx">
+      <DependentUpon>Categorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Imagenes.resx">
       <DependentUpon>Imagenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marcas.resx">
+      <DependentUpon>Marcas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

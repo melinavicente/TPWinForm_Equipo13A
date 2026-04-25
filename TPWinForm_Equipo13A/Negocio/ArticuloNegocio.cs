@@ -69,15 +69,19 @@ namespace Negocio
 					}
 				}
 
-				Datos.CerrarConexion();
 				return lista;
 			}
 			catch (Exception ex)
 			{
 				throw ex;
 
-			}
-		}
+            }
+            finally
+            {
+                Datos.CerrarConexion();
+            }
+
+        }
 
             public void eliminar(int id)
             {
@@ -92,7 +96,11 @@ namespace Negocio
                 {
                     throw ex;
                 }
+            finally
+            {
+                datos.CerrarConexion();
             }
+        }
 
         public void agregar(Articulo articulo)
         {
@@ -114,6 +122,10 @@ namespace Negocio
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
             }
         }
 
@@ -158,6 +170,10 @@ namespace Negocio
             {
                 throw ex;
             }
+            finally
+            {
+                datos.CerrarConexion();
+            }
         }
 
         public void agregarImagen(Imagen img)
@@ -176,6 +192,10 @@ namespace Negocio
             {
 
                 throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
             }
         }
 
