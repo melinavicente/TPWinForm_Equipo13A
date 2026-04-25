@@ -17,6 +17,8 @@ namespace TPWinForm_Equipo13A
     {
         private List<Imagen> listaImagenes;
 
+        private Articulo articulo;
+
         public Imagenes()
         {
             InitializeComponent();
@@ -25,7 +27,8 @@ namespace TPWinForm_Equipo13A
         public Imagenes(Articulo art)
         {
             InitializeComponent();
-            listaImagenes = art.Imagenes;
+            articulo = art;
+            listaImagenes = articulo.Imagenes;
         }
 
         private void Imagenes_Load(object sender, EventArgs e)
@@ -33,10 +36,95 @@ namespace TPWinForm_Equipo13A
             dgvImagenes.DataSource = listaImagenes;
             dgvImagenes.Columns["IdArticulo"].Visible = false;
             dgvImagenes.AutoResizeColumns();
+            pcbImagenes.Visible = true;
+            dgvImagenes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvImagenes.MultiSelect = false;
+
+            if (listaImagenes != null && listaImagenes.Count > 0)
+            {
+                pcbImagenes.LoadAsync(listaImagenes[0].URL);
+            }
+            else
+            {
+                pcbImagenes.Visible = false;
+                lblnoImg.Visible = true;
+            }
+
         }
-        private void dgvImagenes_SelectionChanged(object sender, EventArgs e)
+
+        private void dgvImagenes_SelectionChanged_1(object sender, EventArgs e)
         {
+            try
+            {
+                if (dgvImagenes.CurrentRow != null)
+                {
+                    Imagen img = (Imagen)dgvImagenes.CurrentRow.DataBoundItem;
+
+                    if (img != null)
+                        pcbImagenes.LoadAsync(img.URL);
+                }
+                else
+                {
+                    pcbImagenes.Visible = false;
+                    lblnoImg.Visible = true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void btnEliminarImagen_Click(object sender, EventArgs e)
+        {
+            if(dgvImagenes.SelectedRows.Count == -1)
+            {
+                MessageBox.Show("Por favor, seleccione una imagen para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DialogResult confirmacion = MessageBox.Show("Estas por eliminar una imagen", "Confirmar eliminación",
+             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if(confirmacion == DialogResult.Yes)
+            {
+
+                Imagen img = (Imagen)dgvImagenes.CurrentRow.DataBoundItem;
+
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                negocio.eliminarImagen(img);
+
+                listaImagenes.Remove(img);
+
+            }
             
         }
+
+        private void btnAgregarImagen_Click(object sender, EventArgs e)
+        {
+            if(txtAgregarNuevaURL.Text == "")
+            {
+                MessageBox.Show("Ingrese una URL");
+            }
+            else
+            {
+                Imagen nuevaImagen = new Imagen();
+                ArticuloNegocio negocio = new ArticuloNegocio();
+
+                Imagen imagenSeleccionada = (Imagen)dgvImagenes.CurrentRow.DataBoundItem;
+                string AgregarURL = txtAgregarNuevaURL.Text;
+
+                nuevaImagen.URL = AgregarURL;
+                nuevaImagen.IdArticulo = imagenSeleccionada.IdArticulo;
+
+                negocio.agregarImagen(nuevaImagen);
+                                        
+
+            }
+
+        }
+
     }
 }

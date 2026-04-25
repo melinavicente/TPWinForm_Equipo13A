@@ -19,7 +19,7 @@ namespace Negocio
 			try
 			{
 				Datos.setearConsulta(
-                    "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca, C.Descripcion as Categoria, I.Id as IdImagen, I.IdArticulo, I.ImagenUrl as Imagen, A.IdMarca, A.IdCategoria " +
+                    "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca, C.Descripcion as Categoria, I.Id as IdImagen, I.IdArticulo, I.ImagenUrl as Imagen, I.Id as IdImagen, A.IdMarca, A.IdCategoria " +
 					"from ARTICULOS A " +
 					"INNER JOIN MARCAS M ON M.Id = A.IdMarca " +
 					"INNER JOIN CATEGORIAS C ON C.Id = A.IdCategoria " +
@@ -80,19 +80,19 @@ namespace Negocio
 		}
 
             public void eliminar(int id)
-        {
-            AccesoDatos datos = new AccesoDatos();
-            try
             {
-                datos.setearConsulta("DELETE FROM ARTICULOS WHERE Id = @id");
-                datos.setearParametro("@id", id);
-                datos.ejecutarAccion();
+                AccesoDatos datos = new AccesoDatos();
+                try
+                {
+                    datos.setearConsulta("DELETE FROM ARTICULOS WHERE Id = @id");
+                    datos.setearParametro("@id", id);
+                    datos.ejecutarAccion();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
 
         public void agregar(Articulo articulo)
         {
@@ -142,6 +142,40 @@ namespace Negocio
             finally
             {
                 datos.CerrarConexion();
+            }
+        }
+
+        public void eliminarImagen(Imagen img)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("DELETE FROM IMAGENES WHERE Id = @id");
+                datos.setearParametro("@id", img.Id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void agregarImagen(Imagen img)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("INSERT INTO IMAGENES(IdArticulo, ImagenUrl) VALUES(@IdArticulo, @ImagenUrl)");
+                datos.setearParametro("@IdArticulo", img.IdArticulo);
+                datos.setearParametro("@ImagenUrl", img.URL);
+                datos.ejecutarAccion();
+                                
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
             }
         }
 

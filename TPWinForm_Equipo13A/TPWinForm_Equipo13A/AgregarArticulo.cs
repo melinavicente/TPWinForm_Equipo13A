@@ -106,9 +106,6 @@ namespace TPWinForm_Equipo13A
                 cmbAgregarCategoria.SelectedValue = articulo.Categoria.Id;
                 cmbAgregarMarca.SelectedValue = articulo.Marca.Id;
                 txtbAgregarPrecio.Text = articulo.Precio.ToString();
-                
-                
-
             }
         }
 
@@ -126,6 +123,7 @@ namespace TPWinForm_Equipo13A
         {
             Imagenes formImagenes = new Imagenes(articulo);
             formImagenes.ShowDialog();
+
         }
     }
     }
