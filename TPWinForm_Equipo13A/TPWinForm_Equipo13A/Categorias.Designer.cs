@@ -40,18 +40,18 @@
             // 
             this.lblArticulos.AutoSize = true;
             this.lblArticulos.Font = new System.Drawing.Font("Microsoft YaHei UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArticulos.Location = new System.Drawing.Point(11, 9);
-            this.lblArticulos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblArticulos.Location = new System.Drawing.Point(15, 11);
             this.lblArticulos.Name = "lblArticulos";
-            this.lblArticulos.Size = new System.Drawing.Size(216, 40);
+            this.lblArticulos.Size = new System.Drawing.Size(265, 50);
             this.lblArticulos.TabIndex = 3;
             this.lblArticulos.Text = "CATEGORÍAS";
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(342, 156);
+            this.btnEliminar.Location = new System.Drawing.Point(456, 192);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 12;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -59,9 +59,10 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(261, 156);
+            this.btnModificar.Location = new System.Drawing.Point(348, 192);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.Size = new System.Drawing.Size(100, 28);
             this.btnModificar.TabIndex = 11;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -69,9 +70,10 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(180, 156);
+            this.btnAgregar.Location = new System.Drawing.Point(240, 192);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(100, 28);
             this.btnAgregar.TabIndex = 10;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -79,32 +81,37 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(180, 130);
+            this.txtDescripcion.Location = new System.Drawing.Point(240, 160);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(237, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(315, 22);
             this.txtDescripcion.TabIndex = 9;
             // 
             // lsbCategorias
             // 
             this.lsbCategorias.FormattingEnabled = true;
-            this.lsbCategorias.Location = new System.Drawing.Point(18, 52);
+            this.lsbCategorias.ItemHeight = 16;
+            this.lsbCategorias.Location = new System.Drawing.Point(24, 64);
+            this.lsbCategorias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lsbCategorias.Name = "lsbCategorias";
-            this.lsbCategorias.Size = new System.Drawing.Size(137, 368);
+            this.lsbCategorias.Size = new System.Drawing.Size(181, 452);
             this.lsbCategorias.TabIndex = 8;
             // 
             // Categorias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lsbCategorias);
             this.Controls.Add(this.lblArticulos);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Categorias";
             this.Text = "Categorias";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Categorias_FormClosed_1);
             this.Load += new System.EventHandler(this.Categorias_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -129,15 +129,15 @@ namespace TPWinForm_Equipo13A
         private void button1_Click(object sender, EventArgs e)
         {
             Marcas marcas = new Marcas();
-            marcas.Show();
             this.Hide();
+            marcas.ShowDialog();
         }
 
         private void btnCategorias_Click(object sender, EventArgs e)
         {
             Categorias categorias  = new Categorias();
-            categorias.Show(); 
             this.Hide(); 
+            categorias.ShowDialog(); 
         }
     }
 }

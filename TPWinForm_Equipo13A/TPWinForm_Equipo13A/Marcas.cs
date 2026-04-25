@@ -135,10 +135,11 @@ namespace TPWinForm_Equipo13A
             }
         }
 
-        private void Marcas_FormClosed(object sender, FormClosedEventArgs e)
+        private void Marcas_FormClosed_1(object sender, FormClosedEventArgs e)
         {
             MainMenu mn = new MainMenu();
             mn.Show(); 
+
         }
     }
 }
