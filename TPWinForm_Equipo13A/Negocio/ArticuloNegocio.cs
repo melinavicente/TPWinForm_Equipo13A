@@ -19,7 +19,7 @@ namespace Negocio
 			try
 			{
 				Datos.setearConsulta(
-                    "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca, C.Descripcion as Categoria, I.ImagenUrl as Imagen, A.IdMarca, A.IdCategoria " +
+                    "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca, C.Descripcion as Categoria, I.Id as IdImagen, I.IdArticulo, I.ImagenUrl as Imagen, A.IdMarca, A.IdCategoria " +
 					"from ARTICULOS A " +
 					"INNER JOIN MARCAS M ON M.Id = A.IdMarca " +
 					"INNER JOIN CATEGORIAS C ON C.Id = A.IdCategoria " +
@@ -63,6 +63,8 @@ namespace Negocio
 					{
 						Imagen img = new Imagen();
 						img.URL = (string)Datos.Lector["Imagen"];
+                        img.Id = (int)Datos.Lector["IdImagen"];
+                        img.IdArticulo = (int)Datos.Lector["IdArticulo"];
 						aux.Imagenes.Add(img);
 					}
 				}

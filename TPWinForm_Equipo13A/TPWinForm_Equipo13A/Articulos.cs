@@ -25,7 +25,7 @@ namespace TPWinForm_Equipo13A
 
         private void Articulos_Load(object sender, EventArgs e)
         {
-            //ArticuloNegocio negocio = new ArticuloNegocio();
+            
             try
             {
                 actualizarListado(negocio);

@@ -31,6 +31,12 @@ namespace TPWinForm_Equipo13A
         private void Imagenes_Load(object sender, EventArgs e)
         {
             dgvImagenes.DataSource = listaImagenes;
+            dgvImagenes.Columns["IdArticulo"].Visible = false;
+            dgvImagenes.AutoResizeColumns();
+        }
+        private void dgvImagenes_SelectionChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
